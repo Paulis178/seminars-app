@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/Paulis178/seminars-app/static/js/main.0ae7079e.js",
-    "static/js/453.7d8d564e.chunk.js": "/Paulis178/seminars-app/static/js/453.7d8d564e.chunk.js",
-    "index.html": "/Paulis178/seminars-app/index.html",
-    "main.0ae7079e.js.map": "/Paulis178/seminars-app/static/js/main.0ae7079e.js.map",
-    "453.7d8d564e.chunk.js.map": "/Paulis178/seminars-app/static/js/453.7d8d564e.chunk.js.map"
+    "main.js": "/seminars-app/static/js/main.b6c0417a.js",
+    "static/js/453.7d8d564e.chunk.js": "/seminars-app/static/js/453.7d8d564e.chunk.js",
+    "index.html": "/seminars-app/index.html",
+    "main.b6c0417a.js.map": "/seminars-app/static/js/main.b6c0417a.js.map",
+    "453.7d8d564e.chunk.js.map": "/seminars-app/static/js/453.7d8d564e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.0ae7079e.js"
+    "static/js/main.b6c0417a.js"
   ]
 }
