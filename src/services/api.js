@@ -1,14 +1,9 @@
 import axios from 'axios';
 
-const API_URL = 'https://seminars-app-4qgk.onrender.com/api';
+const API_URL = 'https://seminar-backend.onrender.com/api';
 
 export const getSeminars = async () => {
-    const response = await fetch(`${API_URL}/seminars`, {
-        headers: {
-            'Accept': 'application/json',
-            'Host': 'seminars-app-4qgk.onrender.com' // Явно указываем Host
-        }
-    });
+    const response = await fetch(`${API_URL}/seminars`);
     return await response.json();
 };
 
