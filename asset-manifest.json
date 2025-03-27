@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/static/js/main.25e17fa8.js",
-    "static/js/453.7d8d564e.chunk.js": "/static/js/453.7d8d564e.chunk.js",
-    "index.html": "/index.html",
-    "main.25e17fa8.js.map": "/static/js/main.25e17fa8.js.map",
-    "453.7d8d564e.chunk.js.map": "/static/js/453.7d8d564e.chunk.js.map"
+    "main.js": "/seminars-app/static/js/main.78055687.js",
+    "static/js/453.7d8d564e.chunk.js": "/seminars-app/static/js/453.7d8d564e.chunk.js",
+    "index.html": "/seminars-app/index.html",
+    "main.78055687.js.map": "/seminars-app/static/js/main.78055687.js.map",
+    "453.7d8d564e.chunk.js.map": "/seminars-app/static/js/453.7d8d564e.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.25e17fa8.js"
+    "static/js/main.78055687.js"
   ]
 }
