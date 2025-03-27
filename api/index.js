@@ -15,4 +15,6 @@ server.use((req, res, next) => {
 server.use(middlewares);
 server.use('/api', router); // Все роуты будут начинаться с /api
 
-module.exports = server;
+module.exports = (req, res) => {
+    res.json({ message: "Test successful", dbExists: require('fs').existsSync('./db.json') });
+};
