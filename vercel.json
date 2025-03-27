@@ -1,26 +1,9 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "package.json",
-            "use": "@vercel/static-build"
-        },
-        {
-            "src": "api/index.js",
-            "use": "@vercel/node"
-        }
-    ],
     "routes": [
         {
-            "src": "/api/.*",
-            "dest": "/api"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/index.html",
-            "headers": {
-                "Cache-Control": "no-cache"
-            }
+            "src": "/api/(.*)",
+            "dest": "/api/seminars"
         }
     ]
 }

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://seminar-backend.onrender.com/api';
+const API_URL = 'https://seminars-app-tu26.vercel.app/api';
 
 export const getSeminars = async () => {
     const response = await fetch(`${API_URL}/seminars`);
