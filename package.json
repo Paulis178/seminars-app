@@ -21,8 +21,9 @@
     },
     "homepage": "https://seminars-app.vercel.app",
     "scripts": {
-        "start": "react-scripts start",
+        "start": "serve -s build",
         "build": "react-scripts build",
+        "postbuild": "react-snap",
         "server": "json-server --watch db.json --port 3001"
     },
     "eslintConfig": {
