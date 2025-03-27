@@ -23,10 +23,7 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "server": "node server.js",
-        "dev": "concurrently \"npm start\" \"npm run server\"",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "server": "node api/index.js"
     },
     "eslintConfig": {
         "extends": [
