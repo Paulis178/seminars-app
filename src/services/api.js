@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_URL = 'https://seminars-app.vercel.app/api';
+const API_URL = window.location.hostname === 'localhost'
+    ? 'http://localhost:3000/api'
+    : 'https://seminars-app.vercel.app/api';
 
 // Получение списка семинаров
 export const getSeminars = async () => {
