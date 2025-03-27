@@ -1,11 +1,23 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || "https://seminars-app.onrender.com/api/seminars";
+const API_URL = import.meta.env.VITE_API_URL ||
+    (process.env.NODE_ENV === 'development'
+        ? 'http://localhost:3001/api'
+        : 'https://seminars-app-4qgk.onrender.com/api/seminars');
 
-// Получение списка семинаров
 export const getSeminars = async () => {
-    const response = await fetch(`${API_URL}/seminars`);
-    return await response.json();
+    try {
+        const response = await fetch(`https://seminars-app-4qgk.onrender.com/api/seminars`, {
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        return await response.json();
+    } catch (error) {
+        console.error('Fetch error:', error);
+        throw error;
+    }
 };
 
 // Создание нового семинара
