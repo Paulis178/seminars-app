@@ -19,7 +19,7 @@
         "react-scripts": "5.0.1",
         "web-vitals": "^2.1.4"
     },
-    "homepage": "https://seminars-app.onrender.com",
+    "homepage": "https://seminar-frontend-1b03.onrender.com/",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
