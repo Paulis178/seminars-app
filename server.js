@@ -8,3 +8,7 @@ server.use(router)
 server.listen(3001, () => {
     console.log('JSON Server is running')
 })
+server.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
