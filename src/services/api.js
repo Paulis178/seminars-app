@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3001/api'
-    : 'https://your-api-name.onrender.com/api';
+const API_URL = process.env.REACT_APP_API_URL || "https://seminars-app.onrender.com/api/seminars";
 
 // Получение списка семинаров
 export const getSeminars = async () => {
