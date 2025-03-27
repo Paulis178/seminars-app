@@ -1,17 +1,13 @@
 import axios from 'axios';
 
 const API_URL = process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3000/api'
-    : 'https://seminars-app.vercel.app/api';
+    ? 'http://localhost:3001/api'
+    : 'https://your-api-name.onrender.com/api';
 
 // Получение списка семинаров
 export const getSeminars = async () => {
-    try {
-        const response = await axios.get(API_URL);
-        return response.data;
-    } catch (error) {
-        throw new Error('Ошибка при загрузке семинаров');
-    }
+    const response = await fetch(`${API_URL}/seminars`);
+    return await response.json();
 };
 
 // Создание нового семинара
