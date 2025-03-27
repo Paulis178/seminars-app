@@ -6,7 +6,8 @@ module.exports = (req, res) => {
     const router = jsonServer.router(db);
 
     // CORS для фронтенда
-    res.setHeader('Access-Control-Allow-Origin', 'https://seminar-frontend-1b03.onrender.com');
+    //res.setHeader('Access-Control-Allow-Origin', 'https://seminar-frontend-1b03.onrender.com');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
 
     if (req.method === 'OPTIONS') {
