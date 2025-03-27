@@ -12,12 +12,15 @@
     ],
     "routes": [
         {
-            "src": "/api/(.*)",
-            "dest": "/api/index.js"
+            "src": "/api/.*",
+            "dest": "/api"
         },
         {
             "src": "/(.*)",
-            "dest": "/"
+            "dest": "/index.html",
+            "headers": {
+                "Cache-Control": "no-cache"
+            }
         }
     ]
 }

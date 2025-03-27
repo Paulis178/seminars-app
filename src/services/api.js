@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = window.location.hostname === 'localhost'
+const API_URL = process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000/api'
     : 'https://seminars-app.vercel.app/api';
 
