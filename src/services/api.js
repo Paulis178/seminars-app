@@ -1,10 +1,12 @@
 import axios from 'axios';
 
 const API_URL = process.env.NODE_ENV === 'production'
-    ? 'https://seminars-app.vercel.app/api/seminars'
-    : 'http://localhost:3001/api/seminars';
+    ? 'https://seminars-app.vercel.app/api/seminars'  // Для продакшена
+    : 'http://localhost:3001/seminars';               // Для локальной разработки
 
 // Получение списка семинаров
+console.log(process.env.NODE_ENV);
+
 export const getSeminars = async () => {
     try {
         const response = await axios.get(API_URL);
