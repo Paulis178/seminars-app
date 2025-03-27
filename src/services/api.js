@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const API_URL = process.env.NODE_ENV === 'production'
-    ? 'https://seminars-app.vercel.app/api'
-    : 'http://localhost:3001';
+    ? 'https://seminars-app.vercel.app/api/seminars'
+    : 'http://localhost:3001/api/seminars';
 
 // Получение списка семинаров
 export const getSeminars = async () => {
