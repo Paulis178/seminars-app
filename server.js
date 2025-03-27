@@ -1,21 +1,24 @@
 const jsonServer = require('json-server');
+const db = require('./db.json'); // Явно импортируем данные
+
+// Создаем сервер
 const server = jsonServer.create();
-const router = jsonServer.router('db.json');
+const router = jsonServer.router(db);
 const middlewares = jsonServer.defaults();
 
-// Разрешаем все CORS-запросы
+// CORS middleware
 server.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', '*');
-    res.header('Access-Control-Allow-Headers', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 });
 
 server.use(middlewares);
-server.use('/api', router); // Все роуты будут начинаться с /api
+server.use('/api', router);
 
-const PORT = process.env.PORT || 3001;
-server.listen(PORT, () => {
-    console.log(`Сервер запущен на порту ${PORT}`);
-    console.log(`Доступ к данным: http://localhost:${PORT}/api/seminars`);
-});
+// Экспорт для Vercel Serverless
+module.exports = (req, res) => {
+    // Передаем запрос в json-server
+    server(req, res);
+};

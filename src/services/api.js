@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_URL = 'https://seminars-app-tu26.vercel.app/api';
+const API_URL = process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000/api'
+    : 'https://seminars-app-tu26.vercel.app/api';
 
 export const getSeminars = async () => {
     const response = await fetch(`${API_URL}/seminars`);
